@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>calculator programm</title>
+    <style type="text/css">
+      body {
+        padding: 70px;
+        background-color: white;
+      }
+
+      input[type="text"] {
+        width: 80%;
+        padding: 5px;
+        border: 2px solid;
+      }
+
+      input[type="button"] {
+        width: 15%;
+        font-size: 15px;
+        background-color: white;
+        color: rgb(72, 109, 233);
+        padding: 2px;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+
+      #f1 {
+        padding: 30px;
+        font-size: 25px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      function addfunction() {
+        var a = parseInt(f1.first.value);
+        var b = parseInt(f1.second.value);
+        result = a + b;
+        f1.result.value = result;
+      }
+
+      function substraction() {
+        var a = parseInt(f1.first.value);
+        var b = parseInt(f1.second.value);
+        result = a - b;
+        f1.result.value = result;
+      }
+
+      function division() {
+        var a = parseInt(f1.first.value);
+        var b = parseInt(f1.second.value);
+        result = a / b;
+        f1.result.value = result;
+      }
+
+      function multiplication() {
+        var a = parseInt(f1.first.value);
+        var b = parseInt(f1.second.value);
+        result = a * b;
+        f1.result.value = result;
+      }
+
+      function clears() {
+        f1.first.value = " ";
+        f1.second.value = " ";
+        f1.result.value = " ";
+      }
+    </script>
+    <center>
+      <h2 style="font-size: 25px">Calculator</h2>
+      <fieldset style="width: 30%; border: 2px solid black">
+        <form id="f1">
+          1st number:
+          <input type="text" id="first" /><br /><br />
+          2nd number: <input type="text" id="second" /><br /><br />
+          <input type="button" name="" value="add" onclick="addfunction()" />
+          <input type="button" name="" value="sub" onclick="substraction()" />
+          <input type="button" name="" value="div" onclick="division()" />
+          <input type="button" name="" value="mul" onclick="multiplication()" />
+          <input
+            type="button"
+            name=""
+            value="clear"
+            onclick="clears()"
+          /><br /><br />
+          <input type="text" id="result" />
+        </form>
+      </fieldset>
+    </center>
+  </body>
+</html>

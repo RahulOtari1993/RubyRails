@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>calculator</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Calculator</h1>
+      <div class="calculator">
+        <input type="text" name="answer" id="cal" />
+        <table>
+          <tr>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="1"
+                onclick="operation('1')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="2"
+                onclick="operation('2')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="3"
+                onclick="operation('3')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="+"
+                onclick="operation('+')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="4"
+                onclick="operation('4')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="5"
+                onclick="operation('5')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="6"
+                onclick="operation('6')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="-"
+                onclick="operation('-')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="7"
+                onclick="operation('7')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="8"
+                onclick="operation('8')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="9"
+                onclick="operation('9')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="/"
+                onclick="operation('/')"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="0"
+                onclick="operation('0')"
+              />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="*"
+                onclick="operation('*')"
+              />
+            </td>
+            <td>
+              <input type="button" class="b1" value="=" onclick="solve()" />
+            </td>
+            <td>
+              <input
+                type="button"
+                class="b1"
+                value="."
+                onclick="operation('.')"
+              />
+            </td>
+          </tr>
+        </table>
+        <input type="button" value="clear" onclick="clr()" id="clear" />
+      </div>
+    </div>
+    <script type="text/javascript">
+      function operation(val) {
+        document.getElementById("cal").value += val;
+      }
+      function solve() {
+        var x = document.getElementById("cal").value;
+        var y = eval(x);
+        document.getElementById("cal").value = y;
+      }
+      function clr() {
+        document.getElementById("cal").value = "";
+      }
+    </script>
+  </body>
+</html>
